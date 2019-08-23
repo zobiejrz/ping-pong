@@ -1,2 +1,2 @@
-# fantastic-chainsaw
-An open source RPG game open for contributions
+# Ping-Pong
+It's a game of Ping Pong!
