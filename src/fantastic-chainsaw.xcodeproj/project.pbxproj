@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF578F74230DF7C80046631B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF578F73230DF7C80046631B /* AppDelegate.swift */; };
+		AF578F76230DF7C80046631B /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = AF578F75230DF7C80046631B /* GameScene.sks */; };
+		AF578F78230DF7C80046631B /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = AF578F77230DF7C80046631B /* Actions.sks */; };
+		AF578F7A230DF7C80046631B /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF578F79230DF7C80046631B /* GameScene.swift */; };
+		AF578F7C230DF7C80046631B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF578F7B230DF7C80046631B /* ViewController.swift */; };
+		AF578F7E230DF7CA0046631B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF578F7D230DF7CA0046631B /* Assets.xcassets */; };
+		AF578F81230DF7CA0046631B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF578F7F230DF7CA0046631B /* Main.storyboard */; };
+		AF578F8D230DF7CA0046631B /* fantastic_chainsawTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF578F8C230DF7CA0046631B /* fantastic_chainsawTests.swift */; };
+		AF578F98230DF7CA0046631B /* fantastic_chainsawUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF578F97230DF7CA0046631B /* fantastic_chainsawUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF578F89230DF7CA0046631B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF578F68230DF7C80046631B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF578F6F230DF7C80046631B;
+			remoteInfo = "fantastic-chainsaw";
+		};
+		AF578F94230DF7CA0046631B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF578F68230DF7C80046631B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF578F6F230DF7C80046631B;
+			remoteInfo = "fantastic-chainsaw";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AF578F70230DF7C80046631B /* fantastic-chainsaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fantastic-chainsaw.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF578F73230DF7C80046631B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AF578F75230DF7C80046631B /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		AF578F77230DF7C80046631B /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		AF578F79230DF7C80046631B /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		AF578F7B230DF7C80046631B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AF578F7D230DF7CA0046631B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF578F80230DF7CA0046631B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF578F82230DF7CA0046631B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF578F83230DF7CA0046631B /* fantastic_chainsaw.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = fantastic_chainsaw.entitlements; sourceTree = "<group>"; };
+		AF578F88230DF7CA0046631B /* fantastic-chainsawTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fantastic-chainsawTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF578F8C230DF7CA0046631B /* fantastic_chainsawTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fantastic_chainsawTests.swift; sourceTree = "<group>"; };
+		AF578F8E230DF7CA0046631B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF578F93230DF7CA0046631B /* fantastic-chainsawUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fantastic-chainsawUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF578F97230DF7CA0046631B /* fantastic_chainsawUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fantastic_chainsawUITests.swift; sourceTree = "<group>"; };
+		AF578F99230DF7CA0046631B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF578F6D230DF7C80046631B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF578F85230DF7CA0046631B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF578F90230DF7CA0046631B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF578F67230DF7C80046631B = {
+			isa = PBXGroup;
+			children = (
+				AF578F72230DF7C80046631B /* fantastic-chainsaw */,
+				AF578F8B230DF7CA0046631B /* fantastic-chainsawTests */,
+				AF578F96230DF7CA0046631B /* fantastic-chainsawUITests */,
+				AF578F71230DF7C80046631B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF578F71230DF7C80046631B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF578F70230DF7C80046631B /* fantastic-chainsaw.app */,
+				AF578F88230DF7CA0046631B /* fantastic-chainsawTests.xctest */,
+				AF578F93230DF7CA0046631B /* fantastic-chainsawUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF578F72230DF7C80046631B /* fantastic-chainsaw */ = {
+			isa = PBXGroup;
+			children = (
+				AF578F73230DF7C80046631B /* AppDelegate.swift */,
+				AF578F75230DF7C80046631B /* GameScene.sks */,
+				AF578F77230DF7C80046631B /* Actions.sks */,
+				AF578F79230DF7C80046631B /* GameScene.swift */,
+				AF578F7B230DF7C80046631B /* ViewController.swift */,
+				AF578F7D230DF7CA0046631B /* Assets.xcassets */,
+				AF578F7F230DF7CA0046631B /* Main.storyboard */,
+				AF578F82230DF7CA0046631B /* Info.plist */,
+				AF578F83230DF7CA0046631B /* fantastic_chainsaw.entitlements */,
+			);
+			path = "fantastic-chainsaw";
+			sourceTree = "<group>";
+		};
+		AF578F8B230DF7CA0046631B /* fantastic-chainsawTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF578F8C230DF7CA0046631B /* fantastic_chainsawTests.swift */,
+				AF578F8E230DF7CA0046631B /* Info.plist */,
+			);
+			path = "fantastic-chainsawTests";
+			sourceTree = "<group>";
+		};
+		AF578F96230DF7CA0046631B /* fantastic-chainsawUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AF578F97230DF7CA0046631B /* fantastic_chainsawUITests.swift */,
+				AF578F99230DF7CA0046631B /* Info.plist */,
+			);
+			path = "fantastic-chainsawUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF578F6F230DF7C80046631B /* fantastic-chainsaw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF578F9C230DF7CA0046631B /* Build configuration list for PBXNativeTarget "fantastic-chainsaw" */;
+			buildPhases = (
+				AF578F6C230DF7C80046631B /* Sources */,
+				AF578F6D230DF7C80046631B /* Frameworks */,
+				AF578F6E230DF7C80046631B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "fantastic-chainsaw";
+			productName = "fantastic-chainsaw";
+			productReference = AF578F70230DF7C80046631B /* fantastic-chainsaw.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF578F87230DF7CA0046631B /* fantastic-chainsawTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF578F9F230DF7CA0046631B /* Build configuration list for PBXNativeTarget "fantastic-chainsawTests" */;
+			buildPhases = (
+				AF578F84230DF7CA0046631B /* Sources */,
+				AF578F85230DF7CA0046631B /* Frameworks */,
+				AF578F86230DF7CA0046631B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF578F8A230DF7CA0046631B /* PBXTargetDependency */,
+			);
+			name = "fantastic-chainsawTests";
+			productName = "fantastic-chainsawTests";
+			productReference = AF578F88230DF7CA0046631B /* fantastic-chainsawTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AF578F92230DF7CA0046631B /* fantastic-chainsawUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF578FA2230DF7CA0046631B /* Build configuration list for PBXNativeTarget "fantastic-chainsawUITests" */;
+			buildPhases = (
+				AF578F8F230DF7CA0046631B /* Sources */,
+				AF578F90230DF7CA0046631B /* Frameworks */,
+				AF578F91230DF7CA0046631B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF578F95230DF7CA0046631B /* PBXTargetDependency */,
+			);
+			name = "fantastic-chainsawUITests";
+			productName = "fantastic-chainsawUITests";
+			productReference = AF578F93230DF7CA0046631B /* fantastic-chainsawUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF578F68230DF7C80046631B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Ben Zobrist";
+				TargetAttributes = {
+					AF578F6F230DF7C80046631B = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					AF578F87230DF7CA0046631B = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = AF578F6F230DF7C80046631B;
+					};
+					AF578F92230DF7CA0046631B = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = AF578F6F230DF7C80046631B;
+					};
+				};
+			};
+			buildConfigurationList = AF578F6B230DF7C80046631B /* Build configuration list for PBXProject "fantastic-chainsaw" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF578F67230DF7C80046631B;
+			productRefGroup = AF578F71230DF7C80046631B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF578F6F230DF7C80046631B /* fantastic-chainsaw */,
+				AF578F87230DF7CA0046631B /* fantastic-chainsawTests */,
+				AF578F92230DF7CA0046631B /* fantastic-chainsawUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF578F6E230DF7C80046631B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF578F76230DF7C80046631B /* GameScene.sks in Resources */,
+				AF578F7E230DF7CA0046631B /* Assets.xcassets in Resources */,
+				AF578F78230DF7C80046631B /* Actions.sks in Resources */,
+				AF578F81230DF7CA0046631B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF578F86230DF7CA0046631B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF578F91230DF7CA0046631B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF578F6C230DF7C80046631B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF578F7C230DF7C80046631B /* ViewController.swift in Sources */,
+				AF578F7A230DF7C80046631B /* GameScene.swift in Sources */,
+				AF578F74230DF7C80046631B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF578F84230DF7CA0046631B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF578F8D230DF7CA0046631B /* fantastic_chainsawTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF578F8F230DF7CA0046631B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF578F98230DF7CA0046631B /* fantastic_chainsawUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF578F8A230DF7CA0046631B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF578F6F230DF7C80046631B /* fantastic-chainsaw */;
+			targetProxy = AF578F89230DF7CA0046631B /* PBXContainerItemProxy */;
+		};
+		AF578F95230DF7CA0046631B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF578F6F230DF7C80046631B /* fantastic-chainsaw */;
+			targetProxy = AF578F94230DF7CA0046631B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AF578F7F230DF7CA0046631B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF578F80230DF7CA0046631B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF578F9A230DF7CA0046631B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AF578F9B230DF7CA0046631B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		AF578F9D230DF7CA0046631B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "fantastic-chainsaw/fantastic_chainsaw.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "fantastic-chainsaw/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zobiejrz.fantastic-chainsaw";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AF578F9E230DF7CA0046631B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "fantastic-chainsaw/fantastic_chainsaw.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "fantastic-chainsaw/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zobiejrz.fantastic-chainsaw";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		AF578FA0230DF7CA0046631B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "fantastic-chainsawTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zobiejrz.fantastic-chainsawTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fantastic-chainsaw.app/Contents/MacOS/fantastic-chainsaw";
+			};
+			name = Debug;
+		};
+		AF578FA1230DF7CA0046631B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "fantastic-chainsawTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zobiejrz.fantastic-chainsawTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fantastic-chainsaw.app/Contents/MacOS/fantastic-chainsaw";
+			};
+			name = Release;
+		};
+		AF578FA3230DF7CA0046631B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "fantastic-chainsawUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zobiejrz.fantastic-chainsawUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "fantastic-chainsaw";
+			};
+			name = Debug;
+		};
+		AF578FA4230DF7CA0046631B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "fantastic-chainsawUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zobiejrz.fantastic-chainsawUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "fantastic-chainsaw";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF578F6B230DF7C80046631B /* Build configuration list for PBXProject "fantastic-chainsaw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF578F9A230DF7CA0046631B /* Debug */,
+				AF578F9B230DF7CA0046631B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF578F9C230DF7CA0046631B /* Build configuration list for PBXNativeTarget "fantastic-chainsaw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF578F9D230DF7CA0046631B /* Debug */,
+				AF578F9E230DF7CA0046631B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF578F9F230DF7CA0046631B /* Build configuration list for PBXNativeTarget "fantastic-chainsawTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF578FA0230DF7CA0046631B /* Debug */,
+				AF578FA1230DF7CA0046631B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF578FA2230DF7CA0046631B /* Build configuration list for PBXNativeTarget "fantastic-chainsawUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF578FA3230DF7CA0046631B /* Debug */,
+				AF578FA4230DF7CA0046631B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF578F68230DF7C80046631B /* Project object */;
+}
