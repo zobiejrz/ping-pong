@@ -24,13 +24,18 @@ class GameScene: SKScene {
     var RUp = false
     var RDown = false
     
+    // Score [Left, Right]
+    var Score = [0, 0]
+    
     override func sceneDidLoad() {
-        Ball = self.childNode(withName: "Ball") as! SKSpriteNode
-        LeftPlayer = self.childNode(withName: "LeftPlayer") as! SKSpriteNode
-        RightPlayer = self.childNode(withName: "RightPlayer") as! SKSpriteNode
+        self.Ball = self.childNode(withName: "Ball") as! SKSpriteNode
+        self.Ball.physicsBody!.contactTestBitMask = Ball.physicsBody!.collisionBitMask
         
-        LeftLbl = self.childNode(withName: "LeftLbl") as! SKLabelNode
-        RightLbl = self.childNode(withName: "RightLbl") as! SKLabelNode
+        self.LeftPlayer = self.childNode(withName: "LeftPlayer") as! SKSpriteNode
+        self.RightPlayer = self.childNode(withName: "RightPlayer") as! SKSpriteNode
+        
+        self.LeftLbl = self.childNode(withName: "LeftLbl") as! SKLabelNode
+        self.RightLbl = self.childNode(withName: "RightLbl") as! SKLabelNode
         
         
         let border = SKPhysicsBody(edgeLoopFrom: self.frame)
@@ -40,22 +45,41 @@ class GameScene: SKScene {
         
         self.physicsBody = border
         
+        startPoint()
+    }
+    
+    func startPoint() {
+        // Update score labels
+        self.LeftLbl.text = String(self.Score[0])
+        self.RightLbl.text = String(self.Score[1])
+        
+        // Set Ball Position to (0,0) and set v = 0
+        self.Ball.position.x = 0
+        self.Ball.position.y = 0
+        self.Ball.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
+        
+        
+        // Give ball an intial impulse
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+            // Put your code which should be executed with a delay here
+            self.Ball.physicsBody?.applyImpulse(CGVector(dx: 5, dy: 5)) // CANNOT GO ANY SLOWER THAN (dx: 5 dy: 5), otherwise the ball can't bounce
+        })
     }
     
     override func keyUp(with event: NSEvent) {
         switch event.keyCode {
         case 1:
             print("leftdown")
-            LDown = false
+            self.LDown = false
         case 13:
             print("leftup")
-            LUp = false
+            self.LUp = false
         case 126:
             print("rightup")
-            RUp = false
+            self.RUp = false
         case 125:
             print("rightdown")
-            RDown = false
+            self.RDown = false
         default:
             print(event.keyCode)
         }
@@ -65,16 +89,16 @@ class GameScene: SKScene {
         switch event.keyCode {
         case 1:
             print("leftdown")
-            LDown = true
+            self.LDown = true
         case 13:
             print("leftup")
-            LUp = true
+            self.LUp = true
         case 126:
             print("rightup")
-            RUp = true
+            self.RUp = true
         case 125:
             print("rightdown")
-            RDown = true
+            self.RDown = true
         default:
             print(event.keyCode)
         }
@@ -86,16 +110,25 @@ class GameScene: SKScene {
         
         // ===== Move the players based on their booleans =====
         if LDown { // DOWN
-            LeftPlayer.run(SKAction.moveTo(y: LeftPlayer.position.y-20, duration: 0.1))
+            self.LeftPlayer.run(SKAction.moveTo(y: self.LeftPlayer.position.y-20, duration: 0.1))
         }
         else if LUp { // UP
-            LeftPlayer.run(SKAction.moveTo(y: LeftPlayer.position.y+20, duration: 0.1))
+            self.LeftPlayer.run(SKAction.moveTo(y: self.LeftPlayer.position.y+20, duration: 0.1))
         }
         
         if RDown { // DOWN
-            RightPlayer.run(SKAction.moveTo(y: RightPlayer.position.y-20, duration: 0.1))
+            self.RightPlayer.run(SKAction.moveTo(y: self.RightPlayer.position.y-20, duration: 0.1))
         } else if RUp { // UP
-            RightPlayer.run(SKAction.moveTo(y: RightPlayer.position.y+20, duration: 0.1))
+            self.RightPlayer.run(SKAction.moveTo(y: self.RightPlayer.position.y+20, duration: 0.1))
+        }
+        
+        // ===== Check to see if someone made a point =====
+        if self.Ball.position.x < -470 {
+            self.Score[0] += 1
+            startPoint()
+        } else if self.Ball.position.x > 470 {
+            self.Score[1] += 1
+            startPoint()
         }
     }
 }
