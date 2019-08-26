@@ -29,20 +29,23 @@ class GameScene: SKScene {
     var Score = [0, 0]
     
     // ===== DEBUGGING VARIABLES =====
-    let scoreLength = 460 // The ±x that the Ball must surpass for a point condition
-    let paddleSpeed = 10 // The verticle speed of the Paddle
+    let scoreLength = CGFloat(460) // The ±x that the Ball must surpass for a point condition
+    let paddleDistance = CGFloat(450) // The ±x location of the paddle
+    let paddleSpeed = CGFloat(10) // The verticle speed of the Paddle
+    let ballSpeed = CGVector(dx: 20, dy: 20) // The Speed of the ball. CANNOT GO ANY SLOWER THAN (dx: 5 dy: 5), otherwise the ball can't bounce
+    let height = CGFloat(384) // The ±y coordinate of the screen
     
     override func sceneDidLoad() {
         /*Initialize Game Scene*/
         
         // ===== Initialize variables from GameScene.sks =====
         self.Ball = self.childNode(withName: "Ball") as! SKSpriteNode
-        self.Ball.physicsBody!.contactTestBitMask = Ball.physicsBody!.collisionBitMask
-        
+//        self.Ball.physicsBody!.contactTestBitMask = Ball.physicsBody!.collisionBitMask
         
         self.LeftPlayer = self.childNode(withName: "LeftPlayer") as! SKSpriteNode
+            self.LeftPlayer.position.x = -self.paddleDistance
         self.RightPlayer = self.childNode(withName: "RightPlayer") as! SKSpriteNode
-        
+            self.RightPlayer.position.x = self.paddleDistance
         
         self.LeftLbl = self.childNode(withName: "LeftLbl") as! SKLabelNode
         self.RightLbl = self.childNode(withName: "RightLbl") as! SKLabelNode
@@ -52,6 +55,7 @@ class GameScene: SKScene {
         
         border.friction = 0
         border.restitution = 1
+        border.isDynamic = true
         
         self.physicsBody = border
         
@@ -74,7 +78,7 @@ class GameScene: SKScene {
         
         // Give ball an intial impulse after 2 second delay
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
-            self.Ball.physicsBody?.applyImpulse(CGVector(dx: 5, dy: 5)) // CANNOT GO ANY SLOWER THAN (dx: 5 dy: 5), otherwise the ball can't bounce
+            self.Ball.physicsBody?.applyImpulse(self.ballSpeed)
         })
         
     }
@@ -125,26 +129,38 @@ class GameScene: SKScene {
         
         // ===== Move the players based on their booleans =====
         if LDown { // DOWN
-            self.LeftPlayer.run(SKAction.moveTo(y: self.LeftPlayer.position.y-CGFloat(self.paddleSpeed), duration: 0.1))
+            self.LeftPlayer.position.y -= self.paddleSpeed
         }
         else if LUp { // UP
-            self.LeftPlayer.run(SKAction.moveTo(y: self.LeftPlayer.position.y+CGFloat(self.paddleSpeed), duration: 0.1))
+            self.LeftPlayer.position.y += self.paddleSpeed
         }
         
         if RDown { // DOWN
-            self.RightPlayer.run(SKAction.moveTo(y: self.RightPlayer.position.y-CGFloat(self.paddleSpeed), duration: 0.1))
+            self.RightPlayer.position.y -= self.paddleSpeed
         } else if RUp { // UP
-            self.RightPlayer.run(SKAction.moveTo(y: self.RightPlayer.position.y+CGFloat(self.paddleSpeed), duration: 0.1))
+            self.RightPlayer.position.y += self.paddleSpeed
         }
         
         // ===== Check to see if someone made a point =====
-        if self.Ball.position.x < -CGFloat(self.scoreLength) {
+        if self.Ball.position.x < -self.scoreLength {
             self.Score[1] += 1
             startPoint()
-        } else if self.Ball.position.x > CGFloat(self.scoreLength) {
+        } else if self.Ball.position.x > self.scoreLength {
             self.Score[0] += 1
             startPoint()
         }
-        
+
+        // ===== Fix paddle Y coordinate if they are moved out of position =====
+        if self.LeftPlayer.position.y > self.height {
+            self.LeftPlayer.position.y = self.height
+        } else if self.LeftPlayer.position.y < -self.height {
+            self.LeftPlayer.position.y = -self.height
+        }
+
+        if self.RightPlayer.position.y > self.height {
+            self.RightPlayer.position.y = self.height
+        } else if self.RightPlayer.position.y < -self.height {
+            self.RightPlayer.position.y = -self.height
+        }
     }
 }
