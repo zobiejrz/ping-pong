@@ -39,10 +39,10 @@ class GameScene: SKScene {
         self.Ball = self.childNode(withName: "Ball") as! SKSpriteNode
         self.Ball.physicsBody!.contactTestBitMask = Ball.physicsBody!.collisionBitMask
         
+        
         self.LeftPlayer = self.childNode(withName: "LeftPlayer") as! SKSpriteNode
-        self.LeftPlayer.physicsBody!.collisionBitMask = self.LeftPlayer.physicsBody!.collisionBitMask
         self.RightPlayer = self.childNode(withName: "RightPlayer") as! SKSpriteNode
-        self.RightPlayer.physicsBody!.collisionBitMask = self.RightPlayer.physicsBody!.collisionBitMask
+        
         
         self.LeftLbl = self.childNode(withName: "LeftLbl") as! SKLabelNode
         self.RightLbl = self.childNode(withName: "RightLbl") as! SKLabelNode
