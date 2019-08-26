@@ -3,6 +3,9 @@
 
 > A game of Ping Pong I am using to learn Swift
 
+## Download
+As the code is in pre-release there isn't a singular download link to play. Feel free to download the source code or clone the repository to run the program in Xcode
+
 ## Author
 
 👤 **Ben Zobrist**
