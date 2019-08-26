@@ -1,5 +1,4 @@
 # Welcome to ping-pong 👋
-![Version](https://img.shields.io/npm/v/ping-pong.svg)
 [![Twitter: zobiejrz](https://img.shields.io/twitter/follow/zobiejrz.svg?style=social)](https://twitter.com/zobiejrz)
 
 > A game of Ping Pong I am using to learn Swift
@@ -13,7 +12,7 @@
 
 ## Show your support
 
-Give a ⭐️ if this project helped you!
+Give a ⭐️ if you think this project is kewl!
 
 
 ***
