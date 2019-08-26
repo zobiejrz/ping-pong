@@ -1,18 +1,8 @@
-<h1 align="center">Welcome to ping-pong 👋</h1>
-<p>
-  <img alt="Version" src="https://img.shields.io/npm/v/ping-pong.svg">
-  <a href="https://twitter.com/zobiejrz">
-    <img alt="Twitter: zobiejrz" src="https://img.shields.io/twitter/follow/zobiejrz.svg?style=social" target="_blank" />
-  </a>
-</p>
+# Welcome to ping-pong 👋
+![Version](https://img.shields.io/npm/v/ping-pong.svg)
+[![Twitter: zobiejrz](https://img.shields.io/twitter/follow/zobiejrz.svg?style=social)](https://twitter.com/zobiejrz)
 
-> It's a game of Ping Pong! I'm learning Swift, and here is where I am starting.
-
-## Usage
-
-```sh
-As the code is currently in pre-release there isn't currently 
-```
+> A game of Ping Pong I am using to learn Swift
 
 ## Author
 
@@ -24,6 +14,7 @@ As the code is currently in pre-release there isn't currently
 ## Show your support
 
 Give a ⭐️ if this project helped you!
+
 
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
