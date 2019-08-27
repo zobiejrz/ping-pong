@@ -163,4 +163,20 @@ class GameScene: SKScene {
             self.RightPlayer.position.y = -self.height
         }
     }
+    
+//    @IBAction func StartRestart(_ sender: NSButton) {
+//        print("updating game start/restart")
+//        if self.Ball.physicsBody?.velocity != CGVector(dx: 0, dy: 0) { // Reset Game and make sender.title = "Start"
+//            sender.title = "Start"
+//            self.Score = [0, 0]
+//            self.LeftLbl.text = String(self.Score[0])
+//            self.RightLbl.text = String(self.Score[1])
+//            self.Ball.position.x = 0
+//            self.Ball.position.y = 0
+//            self.Ball.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
+//        } else { // Start Game and make sender.title = "Restart"
+//            sender.title = "Restart"
+//            startPoint()
+//        }
+//    }
 }
